@@ -3,10 +3,11 @@ import { useState, useEffect } from 'react';
 
 const Banner = ( { bgImage = "img/faces/6.jpg" } ) => {
   const [profile, setProfile] = useState([]);
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
   useEffect(() => {
     const fetchAbout = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/users');
+        const response = await fetch(`${apiUrl}/api/users`);
         const data = await response.json();
         if (data.length > 0) {
           setProfile(data[0]); // Set the first profile data
@@ -56,7 +57,7 @@ const Banner = ( { bgImage = "img/faces/6.jpg" } ) => {
           </div>
           <div className="col-xl-5">
             <img
-              src={`http://localhost:5000${profile.image}`}  
+              src={`${apiUrl}${profile.image}`}  
               alt="face"
               className="mil-banner-image"
             />
@@ -73,7 +74,7 @@ export const Banner2 = () => {
   useEffect(() => {
     const fetchAbout = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/users');
+        const response = await fetch(`${apiUrl}/api/users`);
         const data = await response.json();
         if (data.length > 0) {
           setProfile(data[0]); // Set the first profile data
@@ -123,7 +124,7 @@ export const Banner2 = () => {
           </div>
           <div className="col-xl-5">
             <img
-             src={`http://localhost:5000${profile.image}`}
+             src={`${apiUrl}${profile.image}`}
               alt="face"
               className="mil-banner-image"
             />
