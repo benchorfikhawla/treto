@@ -71,6 +71,7 @@ export default Banner;
 
 export const Banner2 = () => {
   const [profile, setProfile] = useState([]);
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
   useEffect(() => {
     const fetchAbout = async () => {
       try {
