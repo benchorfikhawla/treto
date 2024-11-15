@@ -17,13 +17,14 @@ const Page = () => {
   const [loading, setLoading] = useState(true); // Indicateur de chargement
   const [previousProjectId, setPreviousProjectId] = useState(null); // ID du projet précédent
   const [nextProjectId, setNextProjectId] = useState(null); // ID du projet suivant
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
   // Effet de récupération des données à partir de l'API
   useEffect(() => {
     if (id) {
       const fetchProject = async () => {
         try {
-          const response = await fetch(`http://localhost:5000/api/projects/${id}`); // Récupérer les données du projet
+          const response = await fetch(`${apiUrl}/api/projects/${id}`); // Récupérer les données du projet
           const data = await response.json();
           setProject(data.project); // Mettre à jour l'état avec les données du projet
           setPreviousProjectId(data.previousProjectId); // ID du projet précédent
