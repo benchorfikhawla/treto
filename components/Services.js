@@ -39,9 +39,7 @@ const Services = () => {
                 </div>
                 <div className="mil-box-text">
                   <p className="mil-upper mil-text-lg mil-mb-15">{service.name}</p>
-                  {/* <p className="mil-upper mil-mb-30">
-                    ${service.price} <span className="mil-accent">per hour</span>
-                  </p> */}
+                  
                   <p>{service.description}</p>
                 </div>
               </div>
