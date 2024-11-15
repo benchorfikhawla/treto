@@ -58,15 +58,7 @@ const DefaultHeader = () => {
               <i className="fab fa-linkedin-in" />
             </a>
           </li>
-          <li>
-            <a
-              href="https://youtube.com"
-              target="_blank"
-              className="social-icon"
-            >
-              <i className="fab fa-youtube" />
-            </a>
-          </li>
+           
            
         </ul>
       </div>
@@ -89,7 +81,7 @@ const Header1 = () => {
         <ul>
           <li>
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/hajar.benchorfi.1"
               target="_blank"
               className="social-icon"
             >
@@ -98,7 +90,7 @@ const Header1 = () => {
           </li>
           <li>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/khawla.benchorfi/"
               target="_blank"
               className="social-icon"
             >
@@ -107,7 +99,7 @@ const Header1 = () => {
           </li>
           <li>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/khawla-benchorfi-3a46612b9/"
               target="_blank"
               className="social-icon"
             >
@@ -116,13 +108,14 @@ const Header1 = () => {
           </li>
           <li>
             <a
-              href="https://youtube.com"
+              href="https://github.com/benchorfikhawla"
               target="_blank"
               className="social-icon"
             >
-              <i className="fab fa-youtube" />
+              <i className="fab fa-github" />
             </a>
           </li>
+          
           
         </ul>
       </div>
