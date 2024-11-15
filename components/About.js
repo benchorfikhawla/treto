@@ -6,7 +6,7 @@ const About = () => {
   useEffect(() => {
     const fetchAbout = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/users');
+        const response = await fetch('https://server-g51q.onrender.com/api/users');
         const data = await response.json();
         if (data.length > 0) {
           setProfile(data[0]); // Set the first profile data
@@ -26,7 +26,7 @@ const About = () => {
         <div className="row justify-content-between align-items-center">
           <div className="col-xl-4">
             <div className="mil-about-person mil-mb-30">
-              <img src={`http://localhost:5000${profile.imageprofile || ''}`}  alt={profile.name} className="mil-avatar" />
+              <img src={`https://server-g51q.onrender.com${profile.imageprofile || ''}`}  alt={profile.name} className="mil-avatar" />
             </div>
           </div>
           <div className="col-xl-7">
