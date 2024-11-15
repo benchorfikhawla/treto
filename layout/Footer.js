@@ -29,16 +29,16 @@ const Footer2 = () => {
       <div className="mil-social-panel">
         <ul>
           <li>
-            <a href="https://facebook.com">Facebook</a>
+            <a href="https://www.facebook.com/hajar.benchorfi.1">Facebook</a>
           </li>
           <li>
-            <a href="https://instagram.com">Instagram</a>
+            <a href="https://www.instagram.com/khawla.benchorfi/">Instagram</a>
           </li>
           <li>
-            <a href="https://linkedin.com">Linkedin</a>
+            <a href="https://www.linkedin.com/in/khawla-benchorfi-3a46612b9/">Linkedin</a>
           </li>
           <li>
-            <a href="https://youtube.com">Youtube</a>
+            <a href="https://github.com/benchorfikhawla">Github</a>
           </li>
         </ul>
       </div>
