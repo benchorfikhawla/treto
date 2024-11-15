@@ -6,7 +6,7 @@ const Services = () => {
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/services');
+        const response = await fetch(`${apiUrl}/api/services`);
         const data = await response.json();
         setServices(data);
       } catch (error) {
@@ -39,7 +39,9 @@ const Services = () => {
                 </div>
                 <div className="mil-box-text">
                   <p className="mil-upper mil-text-lg mil-mb-15">{service.name}</p>
-                  
+                  {/* <p className="mil-upper mil-mb-30">
+                    ${service.price} <span className="mil-accent">per hour</span>
+                  </p> */}
                   <p>{service.description}</p>
                 </div>
               </div>
