@@ -7,12 +7,13 @@ const PortfolioIsotope = () => {
   const isotope = useRef();
   const [filterKey, setFilterKey] = useState("*");
   const [projects, setProjects] = useState([]);
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
   // Fetch project data from your API
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/projects');
+        const response = await fetch(`${apiUrl}/api/projects`);
         const data = await response.json();
         if (Array.isArray(data)) {
           setProjects(data);
@@ -76,7 +77,7 @@ const PortfolioIsotope = () => {
                 <Link href={`/project/${projectId}`} legacyBehavior>
                   <div className="mil-portfolio-item mil-square-item mil-mb-60">
                     <div className="mil-cover">
-                      <img src={`http://localhost:5000${project.images[0]}`} alt={project.title} /> 
+                      <img src={`${apiUrl}${project.images[0]}`} alt={project.title} /> 
                       <div className="mil-hover-link">
                         <i className="fas fa-link" />
                       </div>

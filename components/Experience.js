@@ -4,11 +4,12 @@ import { sliderProps } from '@/utility/sliderProps'; // Your custom slider prope
 
 const Experience = () => {
   const [experienceData, setExperienceData] = useState([]);
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
   useEffect(() => {
     const fetchExperience = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/experience');
+        const response = await fetch(`${apiUrl}/api/experience`);
         const data = await response.json();
         setExperienceData(data);
       } catch (error) {

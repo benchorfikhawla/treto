@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 const Services = () => {
   const [services, setServices] = useState([]);
-
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
   useEffect(() => {
     const fetchServices = async () => {
       try {
@@ -39,9 +39,9 @@ const Services = () => {
                 </div>
                 <div className="mil-box-text">
                   <p className="mil-upper mil-text-lg mil-mb-15">{service.name}</p>
-                  <p className="mil-upper mil-mb-30">
+                  {/* <p className="mil-upper mil-mb-30">
                     ${service.price} <span className="mil-accent">per hour</span>
-                  </p>
+                  </p> */}
                   <p>{service.description}</p>
                 </div>
               </div>

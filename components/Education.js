@@ -2,11 +2,12 @@ import { useEffect, useState } from 'react';
 
 const Education = () => {
   const [educationData, setEducationData] = useState([]);
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
   useEffect(() => {
     const fetchEducation = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/education');
+        const response = await fetch(`${apiUrl}/api/education`);
         const data = await response.json();
         // Check if the fetched data is an array
         if (Array.isArray(data)) {
@@ -45,7 +46,7 @@ const Education = () => {
             {educationData.map((edu) => (
               <div key={edu._id} className="mil-icon-box mil-mb-40">
                 <div className="mil-text-icon">
-                  <a href={`http://localhost:5000${edu.certificateImage}`} className="mfp-image">
+                  <a href={`${apiUrl}${edu.certificateImage}`} className="mfp-image">
                     +
                   </a>
                 </div>

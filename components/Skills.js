@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 
 const Skills = () => {
   const [skills, setSkills] = useState([]);
-
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
   // Fetch skills data from the backend
   useEffect(() => {
     const fetchSkills = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/skills");
+        const response = await fetch(`${apiUrl}/api/skills`);
         const data = await response.json();
         if (Array.isArray(data)) {
           setSkills(data); // Set the fetched skills data to the state
